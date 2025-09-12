@@ -19,3 +19,26 @@ $FontSize: 0.9rem;
 --Weight400: #{$Weight400};
 --FontSize: #{$FontSize};
 }
+
+//media queries
+$breakpoints: (mobile: 23.125em, tablet: 47.5em, desktop: 64em);
+
+@mixin responsive($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
+
+// 3. El mixin para ocultar y mostrar
+@mixin hide-on($size) {
+  @include responsive($size) {
+    display: none;
+  }
+}
+
+// 4. El mixin para mostrar en un tamaño
+@mixin show-on($size) {
+  @include responsive($size) {
+    display: block; // o flex, grid, etc.
+  }
+}

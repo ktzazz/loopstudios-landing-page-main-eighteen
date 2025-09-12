@@ -1,1 +1,20 @@
 /* reusable modules (nav, button, etc) */
+@use "variables" as v;
+
+.mobile__btn {
+  display: block; 
+  @include v.responsive(desktop) {
+    display: none;
+  }
+}
+
+.header__nav {
+  display: none;
+  @include v.responsive(desktop) {
+    display: block;
+  }
+}
+
+.inactive {
+  display: none;
+}
