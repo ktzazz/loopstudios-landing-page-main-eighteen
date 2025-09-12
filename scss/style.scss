@@ -1,30 +1,9 @@
-/* Global Styles */
+/* main compilator */
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@use "variables";
+@use "typography";
+@use "base";
+@use "layout";
+@use "modules";
 
-$primary-color:  hsl(0, 0%, 100%);
-$secondary-color:  hsl(0, 0%, 0%);
-$accent-color:  hsl(0, 0%, 85%);
-$FontAlata: 'Alata', sans-serif;
-$FontJosefin: 'Josefin Sans', sans-serif;
-$Weight300: 300;
-$Weight400: 400;
-$FontSize: 0.9rem;
-
-:root{
---primary-color: #{$primary-color};
---secondary-color: #{$secondary-color};
---accent-color: #{$accent-color};
---FontTitle: #{$FontAlata};
---FontBody: #{$FontJosefin};
---Weight300: #{$Weight300};
---Weight400: #{$Weight400};
---FontSize: #{$FontSize};
-}
 

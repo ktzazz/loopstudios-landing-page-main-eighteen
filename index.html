@@ -36,6 +36,23 @@
   </head>
   <body>
     <header class="header">
+      <div class="header__container">
+        <picture>
+          <source
+            media="(max-width: 31.25em)"
+            srcset="images/mobile/image-hero.jpg"
+          />
+          <source
+            media="(min-width: 31.25em)"
+            srcset="images/desktop/image-hero.jpg"
+          />
+          <img
+            src="images/desktop/image-hero.jpg"
+            alt="hero image"
+            class="header__hero"
+          />
+        </picture>
+      </div>
       <svg
         class="header__logo"
         width="192"
@@ -83,25 +100,11 @@
           />
         </svg>
       </button>
-    </header>
-
-    <div class="header__container">
-      <picture class="header__hero">
-        <source
-          media="(max-width: 31.25em)"
-          srcset="images/mobile/image-hero.jpg"
-        />
-        <source
-          media="(min-width: 31.25em)"
-          srcset="images/desktop/image-hero.jpg"
-        />
-        <img src="images/desktop/image-hero.jpg" alt="hero image" />
-      </picture>
 
       <div class="header__title">
         <h1>Immersive experiences that deliver</h1>
       </div>
-    </div>
+    </header>
 
     <main>
       <div class="main__intro">
