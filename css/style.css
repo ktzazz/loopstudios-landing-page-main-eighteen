@@ -1,0 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary-color: hsl(0, 0%, 100%);
+  --secondary-color: hsl(0, 0%, 0%);
+  --accent-color: hsl(0, 0%, 85%);
+  --FontTitle: Alata, sans-serif;
+  --FontBody: Josefin Sans, sans-serif;
+  --Weight300: 300;
+  --Weight400: 400;
+  --FontSize: 0.9rem;
+}
