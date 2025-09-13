@@ -1,11 +1,28 @@
 /* non reusable modules (main, footer, etc) */
 
 .header__menu{
-    padding: 2rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-block-start: 2rem;
+    padding-inline: calc(15% - 2rem);
+
+& nav ul{
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+    & li a{
+        text-decoration: none;
+        color: var(--primary-color);
+    }
 }
+
+}
+
+
+
+
 
 
 main {
