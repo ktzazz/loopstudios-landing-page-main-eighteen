@@ -1,4 +1,6 @@
 /* non reusable modules (main, footer, etc) */
+@use "variables" as v;
+
 
 .header__menu{
     display: flex;
@@ -17,14 +19,27 @@
         color: var(--primary-color);
     }
 }
+}
 
+.header__title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 4px solid var(--primary-color);
+    padding: 2rem;
+    @include v.responsive(tablet) {
+        width: 27rem;
+    }
+    @include v.responsive(desktop) {
+        width: 48rem;
+         left: min(40%, 40rem);
+    }
 }
 
 
 
 
-
-
 main {
-    margin-block-start: 90vh;
+    margin-block-start: 100vh;
 }

@@ -13,8 +13,8 @@ $FontSize: 0.9rem;
 --primary-color: #{$primary-color};
 --secondary-color: #{$secondary-color};
 --accent-color: #{$accent-color};
---FontTitle: #{$FontAlata};
---FontBody: #{$FontJosefin};
+--FontTitle: #{$FontJosefin};
+--FontBody: #{$FontAlata};
 --Weight300: #{$Weight300};
 --Weight400: #{$Weight400};
 --FontSize: #{$FontSize};
@@ -29,14 +29,3 @@ $breakpoints: (mobile: 23.125em, tablet: 47.5em, desktop: 64em);
   }
 }
 
-@mixin hide-on($size) {
-  @include responsive($size) {
-    display: none;
-  }
-}
-
-@mixin show-on($size) {
-  @include responsive($size) {
-    display: block;
-  }
-}
