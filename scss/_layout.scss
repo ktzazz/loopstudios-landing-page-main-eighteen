@@ -17,6 +17,22 @@
     & li a{
         text-decoration: none;
         color: var(--primary-color);
+        position: relative;
+    }
+    & li a::after{
+         content: ""; 
+         position: absolute;
+         top: 150%;
+         left: 26%;
+         width: 50%; 
+         height: 3px;
+         background-color: var(--primary-color);
+         transform: scaleX(0);
+         transform-origin: bottom center;
+         transition: transform 0.3s ease-out;
+    }
+    & li a:hover::after{
+        transform: scaleX(1);
     }
 }
 }
@@ -37,9 +53,10 @@
     }
 }
 
-
-
-
 main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-block-start: 100vh;
+    padding: 3rem min(7%, 7rem);
 }

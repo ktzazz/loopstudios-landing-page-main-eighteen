@@ -3,6 +3,8 @@
 
 .mobile__btn {
   display: block; 
+  background: none;
+  border: none;
   @include v.responsive(desktop) {
     display: none;
   }
@@ -17,6 +19,18 @@
 
 .inactive {
   display: none;
+}
+
+.main__img{
+  display: block;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  @include v.responsive(desktop) {
+   width: 60%;
+  }
 }
 
 
