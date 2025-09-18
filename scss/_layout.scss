@@ -22,7 +22,7 @@
          content: ""; 
          position: absolute;
          top: 150%;
-         left: 26%;
+         left: 25%;
          width: 50%; 
          height: 3px;
          background-color: var(--primary-color);
@@ -62,5 +62,9 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 3rem min(7%, 7rem);
+    padding: min(27%, 10rem) 2rem;
+    @include v.responsive(desktop) {
+        padding-inline: 7.7rem;
+    }
 }
+

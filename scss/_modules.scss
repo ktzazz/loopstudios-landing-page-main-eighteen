@@ -23,14 +23,43 @@
 
 .main__img{
   display: block;
-  justify-content: center;
-  align-items: flex-start;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  @include v.responsive(desktop) {
-   width: 60%;
+}
+
+
+.main__intro{
+  @include v.responsive(desktop){
+  max-width: 80vw;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   }
 }
 
+
+.main__imgCont{
+ @include v.responsive(desktop) {
+  width: 60%; 
+  grid-area: 1 / 1 / span 4 / span 5;
+ }
+}
+
+.main__text{
+  text-align: center;
+  padding: 3rem 0;
+  background-color: var(--primary-color);
+  @include v.responsive(desktop) {
+    grid-area: 2 / 3 / span 3 / span 5;
+    padding: 6rem; 
+    padding-inline-end: min(10vw, 12rem);
+    align-self: self-end;
+    text-align: left;
+    height: 80%;
+    width: 92%;
+  }
+
+}
 

@@ -114,21 +114,23 @@
 
     <main>
       <div class="main__intro">
-        <picture>
-          <source
-            media="(max-width: 31.25em)"
-            srcset="images/mobile/image-interactive.jpg"
-          />
-          <source
-            media="(min-width: 31.25em)"
-            srcset="images/desktop/image-interactive.jpg"
-          />
-          <img
-            src="images/desktop/image-interactive.jpg"
-            alt="interactive image"
-            class="main__img"
-          />
-        </picture>
+        <div class="main__imgCont">
+          <picture>
+            <source
+              media="(max-width: 31.25em)"
+              srcset="images/mobile/image-interactive.jpg"
+            />
+            <source
+              media="(min-width: 31.25em)"
+              srcset="images/desktop/image-interactive.jpg"
+            />
+            <img
+              src="images/desktop/image-interactive.jpg"
+              alt="interactive image"
+              class="main__img"
+            />
+          </picture>
+        </div>
 
         <div class="main__text">
           <h2>The leader in interactive VR</h2>

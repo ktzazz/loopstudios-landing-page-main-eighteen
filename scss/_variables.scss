@@ -2,6 +2,7 @@
 
 $primary-color:  hsl(0, 0%, 100%);
 $secondary-color:  hsl(0, 0%, 0%);
+$terciary-color:  hsl(0, 0%, 57%);
 $accent-color:  hsl(0, 0%, 85%);
 $FontAlata: 'Alata', sans-serif;
 $FontJosefin: 'Josefin Sans', sans-serif;
@@ -12,6 +13,7 @@ $FontSize: 0.9rem;
 :root{
 --primary-color: #{$primary-color};
 --secondary-color: #{$secondary-color};
+--terciary-color: #{$terciary-color};
 --accent-color: #{$accent-color};
 --FontTitle: #{$FontJosefin};
 --FontBody: #{$FontAlata};
