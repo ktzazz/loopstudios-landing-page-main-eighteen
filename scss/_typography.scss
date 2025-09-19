@@ -1,4 +1,4 @@
-
+@use "variables" as v;
 
 a{
     font-family: var(--FontBody);
@@ -21,7 +21,11 @@ h1{
 h2{
     color: var(--secondary-color);
     font-weight: var(--Weight300);
-    font-size: clamp(1.7rem, 3vw, 2.5rem);
+    font-size: clamp(1.9rem, 3vw, 2.9rem);
+    padding-block-end: min(1vh, 2rem);
+    @include v.responsive(desktop) {
+      font-size: clamp(2.5rem, 3.2vw, 4rem);
+    }
 }
 
 .main__text p{
@@ -30,4 +34,7 @@ h2{
     font-weight: var(--Weight300);
     font-size: var(--FontSize);
     margin-block-start: 1rem;
+    @include v.responsive(desktop) {
+      font-size: clamp(var(--FontSize), 1.15vw, 2rem);
+    }
 }

@@ -64,7 +64,7 @@ main {
     justify-content: center;
     padding: min(27%, 10rem) 2rem;
     @include v.responsive(desktop) {
-        padding-inline: 7.7rem;
+        padding-inline: min(11%, 10rem);
     }
 }
 

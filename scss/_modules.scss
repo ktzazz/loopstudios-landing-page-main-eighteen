@@ -31,10 +31,9 @@
 
 .main__intro{
   @include v.responsive(desktop){
-  max-width: 80vw;
-  justify-self: center;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 1fr 1fr 0.5fr 1fr 1fr;
   grid-template-rows: repeat(4, 1fr);
   }
 }
@@ -49,16 +48,18 @@
 
 .main__text{
   text-align: center;
-  padding: 3rem 0;
+  padding-block-start: 3rem;
   background-color: var(--primary-color);
   @include v.responsive(desktop) {
     grid-area: 2 / 3 / span 3 / span 5;
-    padding: 6rem; 
-    padding-inline-end: min(10vw, 12rem);
+    padding-inline-start: min(10vw, 9.8rem);
+    display: flex;
+    flex-direction: column;
     align-self: self-end;
+    justify-content: flex-end;
     text-align: left;
-    height: 80%;
-    width: 92%;
+    height: 90%;
+    width: 100%;
   }
 
 }
