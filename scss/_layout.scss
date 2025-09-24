@@ -68,3 +68,39 @@ main {
     }
 }
 
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding: min(27%, 10rem) 2rem;
+     & p{
+        margin-block-start: -1rem;
+        color: var(--terciary-color);
+    }
+    & .attribution{
+        color: var(--terciary-color);
+        a{
+            color: var(--accent-color);
+        }
+    }
+}
+
+.footer__nav{
+     & a{
+        text-decoration: none;
+        color: var(--accent-color);
+        line-height: 2rem;
+    }
+    & ul{
+        list-style: none;
+    }
+}
+
+.footer__social{
+    display: flex;
+    gap: 1.3rem;
+}

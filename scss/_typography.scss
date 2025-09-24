@@ -60,3 +60,13 @@ h4{
     letter-spacing: 0.2rem;
     font-size: clamp(0.8rem, 1vw, 0.9rem);
 }
+
+footer{
+    font-family: var(--FontBody);
+    font-weight: var(--Weight300);
+    font-size: var(--FontSize);
+    & .attribution, a{
+    font-size: 0.75rem;
+}
+}
+
