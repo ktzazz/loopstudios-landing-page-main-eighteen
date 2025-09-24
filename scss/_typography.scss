@@ -38,3 +38,25 @@ h2{
       font-size: clamp(var(--FontSize), 1.15vw, 2rem);
     }
 }
+
+h3{
+    color: var(--secondary-color);
+    font-weight: var(--Weight300);
+    font-size: clamp(1.7rem, 2.7vw, 2.4rem);
+}
+
+h4{
+    color: var(--primary-color);
+    font-weight: var(--Weight300);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    z-index: 2;
+}
+
+.main__btn{
+    color: var(--secondary-color);
+    font-family: var(--FontBody);
+    font-weight: var(--Weight400);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+}
