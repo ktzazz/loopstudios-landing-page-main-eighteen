@@ -2,7 +2,10 @@
 @use "variables" as v;
 
 
-.header__menu{
+
+
+@include v.responsive(desktop) {
+    .header__menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +38,9 @@
     }
 }
 }
+
+}
+
 
 .header__contTitle{
     width: 100%;
