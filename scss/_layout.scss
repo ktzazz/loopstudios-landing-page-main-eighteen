@@ -1,15 +1,46 @@
 /* non reusable modules (main, footer, etc) */
 @use "variables" as v;
 
+ .mobile{
+  width: 0;
+  position: fixed;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-block-start: 11rem;
+  z-index: 5;
+
+    & a {
+        padding: 0.9rem 1.5rem;
+        text-decoration: none;
+        font-size: min(5vw, 1.5rem);
+        color: var(--Very-dark-blue);
+        font-weight: var(--font-weight-bold);
+        display: block;
+        transition: 0.3s;
+        }
+
+    & nav {
+        position: absolute;
+        top: 7rem;
+        }
+        
+    & .open {
+        width: min(65%, 30rem);
+        }
+    }
 
 
-
-@include v.responsive(desktop) {
-    .header__menu{
+.header__menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-block-start: clamp(2rem, 8vh, 7rem);
+
+@include v.responsive(desktop) {
 
 & nav ul{
     display: flex;
