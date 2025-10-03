@@ -10,16 +10,103 @@
   }
 }
 
-.header__nav {
-  display: none;
-  @include v.responsive(desktop) {
-    display: block;
-  }
+.header__logo {
+  z-index: 10;
+}
+
+.header__nav { 
+    display: none;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 0; 
+    background-color: var(--secondary-color);
+    overflow-x: hidden;
+    transition: width 0.5s ease-in-out; 
+    
+    z-index: 5;
+
+    & ul {
+        list-style: none;
+        padding-block-start: 60%;
+        padding-inline-start: 10%;
+
+      & a {
+        padding: 0.7rem;
+        text-decoration: none;
+        color: var(--primary-color);
+        display: block;
+        transition: 0.3s;
+        font-family: var(--FontTitle);
+        font-weight: var(--Weight300);
+        font-size: clamp(1.7rem, 2.5vw, 3.5rem);
+        text-transform: uppercase;
+      }
+
+    }
+
+
+    @include v.responsive(desktop) {
+        display: block; 
+        position: static; 
+        width: auto; 
+        height: auto; 
+        padding: 0; 
+        background-color: transparent; 
+        z-index: auto;
+        overflow: visible;
+
+        & ul {
+            display: flex; 
+            gap: 2rem;
+            list-style: none;
+            padding: 0;
+            & li a{
+             padding: 0;
+             text-decoration: none;
+             color: var(--primary-color);
+             position: relative;
+             font-family: var(--FontBody);
+             font-weight: var(--Weight300);
+             font-size: var(--FontSize);
+             text-transform: capitalize;
+            }
+    & li a::after{
+         content: ""; 
+         position: absolute;
+         top: 150%;
+         left: 25%;
+         width: 50%; 
+         height: 3px;
+         background-color: var(--primary-color);
+         transform: scaleX(0);
+         transform-origin: bottom center;
+         transition: transform 0.3s ease-out;
+    }
+    & li a:hover::after{
+        transform: scaleX(1);
+    }
+        }
+    }
+}
+
+.open {
+  width: 100%; 
+  display: block;
 }
 
 .inactive {
   display: none;
 }
+
+.mobile__close {
+    position: relative;
+    z-index: 10;
+}
+
+
+
 
 .main__img{
   display: block;

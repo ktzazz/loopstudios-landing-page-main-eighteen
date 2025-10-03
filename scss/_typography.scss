@@ -1,6 +1,6 @@
 @use "variables" as v;
 
-a{
+a:not(.header__nav a){
     font-family: var(--FontBody);
     font-weight: var(--Weight300);
     font-size: var(--FontSize);
@@ -16,6 +16,7 @@ h1{
     color: var(--primary-color);
     font-weight: var(--Weight300);
     font-size: clamp(2.5rem, 7vw, 5rem);
+    text-wrap: wrap;
 }
 
 h2{
