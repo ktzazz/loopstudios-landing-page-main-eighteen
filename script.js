@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function toggleMobileMenu() {
     headerNav.classList.toggle("open");
+    document.body.classList.toggle("no-scroll");
     mobileOpen.classList.toggle("inactive");
     mobileClose.classList.toggle("inactive");
   }
